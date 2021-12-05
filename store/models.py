@@ -9,4 +9,5 @@ class Box(models.Model):
     volume = models.DecimalField(max_digits=10, decimal_places=2,blank=True)
     created_by=models.ForeignKey(User,on_delete=models.PROTECT,blank=True)
     last_updated=models.DateTimeField(auto_now=True)
+    created_date=models.DateTimeField(auto_now_add=True)
 

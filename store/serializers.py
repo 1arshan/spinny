@@ -20,4 +20,22 @@ class UserSerializer(serializers.ModelSerializer):
 class BoxSerializer(serializers.ModelSerializer):
     class Meta:
         model = Box
-        fields = ["length","width","height"]
+        fields = ["length", "width", "height"]
+
+
+class BoxNonStaffSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Box
+        fields = ["length", "width", "height", "area", "volume"]
+
+
+class BoxStaffSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Box
+        fields = ["length", "width", "height", "area", "volume", "created_by", "last_updated", "created_date"]
+
+
+class BoxNonStaffSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Box
+        fields = ["length", "width", "height", "area", "volume"]
